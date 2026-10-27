@@ -1,24 +1,16 @@
-# DEV@Deakin - Task D1: Subscription & Session Management
+# React + Vite
 
-This repository contains the implementation for **SIT313 Secure Frontend Applications - Task D1 (Subscription)**. This project builds upon the DEV@Deakin platform by introducing user session management, tiered subscription plans, and an upgrade workflow integrated with Firebase Firestore.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+Currently, two official plugins are available:
 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-##  Key Features
+## React Compiler
 
-* **User Authentication & Session Management**: Tracks user login and logout states using token/session storage and global state (`useContext`).
-* **Subscription Model (Free vs. Premium)**: Compares platform features between a Free Community tier and a Premium Developer tier.
-* **Conditional Upgrade Workflow**: 
-  * Only logged-in users can trigger the upgrade flow.
-  * Free tier users can access the payment modal.
-  * Already upgraded (Paid) users receive an active subscription indicator.
-* **Payment Validation Modal**: Captures and validates cardholder name, card number, expiry date (MM/YY), and CVC.
-* **Real-Time State & Firestore Sync**: Updates the user's `subscriptionPlan` status to `paid` in Firestore and updates the UI badge to `PREMIUM`.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
+## Expanding the ESLint configuration
 
-
-## Tech Stack
-
-* **Frontend**: React, Vite, React Router DOM, Lucide React
-* **Backend / Database**: Firebase (Authentication & Cloud Firestore) / Express.js
-* **State Management**: React Context API (`AuthContext`)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
